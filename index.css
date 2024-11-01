@@ -1,8 +1,9 @@
 .comp{
     display: flex;
     flex-direction: row;
-
 }
-.left{
-    font-family: ;
+
+.right{
+    display: flex;
+    flex-direction: column;
 }
