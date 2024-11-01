@@ -1,6 +1,7 @@
 .comp{
     display: flex;
     flex-direction: row;
+    font-family: "Space+Mono";
 }
 
 .right{
