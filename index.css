@@ -9,4 +9,22 @@
     flex-direction: column;
 }
 
-.
+.tip{
+    display: flex;
+    flex-direction: row;
+}
+
+.total{
+    display: flex;
+    flex-direction: row;
+}
+
+.tip{
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+}
+
