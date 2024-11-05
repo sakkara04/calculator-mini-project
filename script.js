@@ -11,6 +11,8 @@ let billAmt = document.getElementById("bill");
 let numAmt = document.getElementById("num");
 let tipButtons = document.querySelectorAll(".tip-buttons button");
 
+toggleResetButton()
+
 function toggleResetButton() {
   if (bill > 0 || tip > 0 || num > 1) {
     resetButton.disabled = false;
