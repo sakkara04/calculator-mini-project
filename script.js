@@ -10,6 +10,20 @@ let totalPerAmt = document.getElementById("total");
 let billAmt = document.getElementById("bill");
 let numAmt = document.getElementById("num");
 
+function toggleResetButton() {
+    if (tipPer > 0 || totalPer > 0) {
+      resetButton.disabled = false;  // Enable the button
+      resetButton.classList.remove("disabled");
+      resetButton.classList.add("enabled");
+    } else {
+      resetButton.disabled = true;  // Disable the button
+      resetButton.classList.remove("enabled");
+      resetButton.classList.add("disabled");
+    }
+  }
+
+toggleResetButton();
+
 resetButton.addEventListener("click", function() {
     tipPer = 0;
     totalPer = 0;
@@ -17,14 +31,17 @@ resetButton.addEventListener("click", function() {
     totalPerAmt.innerHTML = "$" + totalPer.toFixed(2);
     billAmt.value = "";
     numAmt.value = "";
+    toggleResetButton(); 
   });
 
 
 billAmt.addEventListener("keydown", function(event) {
 if (event.key === "Enter") {
     bill = Number(billAmt.value);
-    tipPerAmt.innerHTML = "$" + bill.toFixed(2);
+    tipPer = Number(billAmt.value)
+    tipPerAmt.innerHTML = "$" + tipPer.toFixed(2);
     totalPerAmt.innerHTML = "$" + bill.toFixed(2);
+    toggleResetButton(); 
     }
  });
 
@@ -34,10 +51,11 @@ if (event.key === "Enter") {
         if ((bill != 0) && (num != 0)){
             calculatePer();
         }
-        }
+    }
      });
 
 function calculatePer(){
     totalPer = bill / num;
     totalPerAmt.innerHTML = "$" + totalPer.toFixed(2);
+    toggleResetButton(); 
 }
