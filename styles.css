@@ -13,7 +13,7 @@
 .right{
     display: flex;
     flex-direction: column;
-    width: 345px;
+    width: 285px;
     height: 285px;
     padding: 30px;
     background-color: hsl(183, 100%, 15%);
@@ -27,22 +27,22 @@
 
 }
 
-.tip{
+.section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.total{
+
+.text{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+
 }
 
 .reset{
-    height: 35px;
+    height: 38px;
     border-radius: 5px;
     font-family: "Space Mono";
     font-weight: 700;
@@ -50,17 +50,23 @@
     color: hsl(183, 100%, 15%);
     background-color: hsl(172, 67%, 45%);
     border: none;
-    margin-top: 115px
+    margin-top: 135px
+}
+
+.reset:hover{
+    background-color:  hsl(185, 41%, 84%);
 }
 
 .title {
     font-size: 12px;
-    color: hsl(189, 41%, 97%)
+    color: hsl(189, 41%, 97%);
+    margin-bottom: 0px;
 }
 
 .sub{
     font-size: 10px;
-    color: hsl(184, 14%, 56%)
+    color: hsl(184, 14%, 56%);
+    margin-top: 2px;
 }
 
 .amt{
