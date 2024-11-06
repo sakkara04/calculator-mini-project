@@ -121,9 +121,15 @@
     margin: 5px;
 }
 
+
 .tip-buttons button:hover{
     background-color: hsl(185, 41%, 84%);
     color:hsl(183, 100%, 15%);
+}
+
+.tip-buttons button.selected{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%)
 }
 
 #bill{
@@ -133,9 +139,11 @@
     text-align: right;
     font-family: 'Space Mono', sans-serif;
     background-color: hsl(189, 41%, 97%);
-    font-weight: 800;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
     font-size: large;
 }
+
 
 #num{
     height: 30px;
@@ -144,7 +152,8 @@
     text-align: right;
     font-family: 'Space Mono', sans-serif;
     background-color: hsl(189, 41%, 97%);
-    font-weight: 800;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
     font-size: large;
 }
 

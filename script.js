@@ -35,6 +35,7 @@ resetButton.addEventListener("click", function () {
   totalPerAmt.innerHTML = "$0.00";
   billAmt.value = "";
   numAmt.value = "";
+  tipButtons.forEach(button => button.classList.remove("selected"));
   toggleResetButton();
 });
 
@@ -51,6 +52,10 @@ function calculatePerPerson() {
 tipButtons.forEach(button => {
   button.addEventListener("click", function () {
     tip = button.textContent.includes("%") ? parseInt(button.textContent) : 0;
+
+    tipButtons.forEach(btn => btn.classList.remove("selected"));
+    button.classList.add("selected");
+
     calculatePerPerson();
   });
 });
@@ -73,5 +78,6 @@ tipButtons[5].replaceWith(customTipInput);
 
 customTipInput.addEventListener("input", function () {
   tip = parseFloat(customTipInput.value) || 0;
+  tipButtons.forEach(button => button.classList.remove("selected"));
   calculatePerPerson();
 });
